@@ -59,6 +59,15 @@ For a deeper explanation of how SPARK defines and operationalizes intelligence, 
 SPARK uses opinionated terminology to preserve analytical intent and traceability.
 See [`Terminology`](docs/01_concepts/terminology.md) for definitions used throughout the project.
 
+## Documentation
+- 📘 [Concepts & Philosophy](docs/01_concepts/)
+- 🧠 [Architecture & Design](docs/architecture/)
+- 🧩 [Templates](docs/templates/)
+- 🚀 [Demo & Examples](docs/demo/)
+- 🔧 [Setup & Configuration](docs/setup/)
+- 🔐 [Security](SECURITY.md)
+- 🗺️ [Roadmap](ROADMAP.md)
+
 ---
 ## How SPARK Works
 
