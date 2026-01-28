@@ -1,61 +1,81 @@
-# SecAI — Phase 6.4 (ADS Alignment + Governance + Diff + Lifecycle)
+SPARK v1.2 — Application Runtime
 
-This demo package implements the **v1.0 locked workflow** with a local-LLM swap-in via **Ollama** (no cloud calls).
+Purpose
 
-## What’s included
-- Streamlit MVP UI: **Dashboard → Intel Briefs → Hunt Packages → Runs → Findings → ADS → Artifacts/Export → Settings**
-- Local-first storage (JSON + Markdown) under `./data/`
-- Guardrail: **Hunt Package generation is blocked until an Intel Brief is marked Approved**
-- LLM abstraction (`byo_secai/llm.py`)
-  - `OllamaLLM`: calls your local Ollama server
-  - `StubLLM`: deterministic fallback when Ollama is not reachable
+SPARK_v1_2/ represents the execution layer of SPARK.
 
-## Quick start
-1) Install dependencies
-```bash
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\\Scripts\\activate
-pip install -r requirements.txt
-```
+It is responsible for:
 
-2) Ensure Ollama is running (optional but recommended)
-- Default host: `http://localhost:11434`
-- Pull a model, for example:
-```bash
-ollama pull llama3.1
-```
+Running the SPARK application
 
-3) Run the app
-```bash
-streamlit run app.py
-```
+Managing local analyst configuration and state
 
-## Ollama settings
-Open **Settings** and set:
-- Ollama Host (default: `http://localhost:11434`)
-- Model (default: `llama3.1`)
-- Temperature
+Enabling structured workflows across:
 
-If Ollama is down/unreachable, the app continues in **stub mode**.
+Threat Intelligence
 
-## Data
-Artifacts are stored in:
-- `./data/artifacts/...` (JSON)
-- `./data/exports/...` (Markdown exports)
+Threat Hunting
 
-To reset demo state, delete the `data/` directory.
-
-## Fix 7 notes (template + performance)
-- Intel Brief generation is **template-locked** to the v1.0 section order (reduces drift).
-- Optional URL fetch/extract is **cached** to keep view switching fast.
-- Common model preambles (e.g., "Thinking...") are stripped from saved artifacts.
-- Default max source extract is **6000** chars for snappy UX (adjustable in Settings).
+Detection Strategy authoring
 
 
-## Phase 5.4.8 (V1 hardening)
-- Cached index/listing via st.cache_data
-- Global _index.json maintained on save
-- Lazy-load per view (via indexed listing)
-- Intel/Hunt preview uses deterministic rendered report from Draft
-- LLM output moved to Assistant Suggestions sidecar (.assistant.json)
-- Export uses same deterministic renderer output
+
+All outputs produced here are designed to align with SPARK’s core principles: preserve intent, enforce validation, and maintain auditability.
+
+
+---
+
+Scope Boundaries
+
+This directory does not define:
+
+The philosophy behind SPARK
+
+The analytical lifecycle model
+
+Template intent or governance
+
+Architecture or design rationale
+
+
+Those concepts are intentionally documented elsewhere to keep runtime concerns clean and focused.
+
+
+---
+
+Project Orientation
+
+To understand SPARK as a platform, start with:
+
+Project Overview: /README.md
+
+Concepts & Architecture: /docs/
+
+Templates & Lifecycle Examples: /docs/templates/, /docs/demo/
+
+
+This directory exists to run SPARK, not to explain it.
+
+
+---
+
+Design Intent
+
+SPARK is:
+
+Analyst-first
+
+Local-first
+
+Explainable and auditable
+
+AI-augmented, not AI-driven
+
+
+Analyst review and approval are required before artifacts advance between stages.
+
+
+---
+
+> This directory executes SPARK.
+The meaning of SPARK lives in the documentation.
