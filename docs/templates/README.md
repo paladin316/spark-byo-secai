@@ -6,6 +6,13 @@ These templates are not paperwork. They are **guardrails** — designed to prese
 
 > **AI may assist drafting or enrichment, but promotion between artifacts is always analyst-driven.**
 
+## Templates
+- [Threat Intelligence Brief](threat-intel-briefing.md)
+- [Threat Hunt Package](threat-hunt-package.md)
+- [Threat Hunt Report](threat-hunt-report.md)
+- [Threat Hunt IR Report](threat-hunt-ir-report.md)
+- [Alert Detection Strategy (ADS)](ads.md)
+
 ---
 
 ## Why Templates Exist in SPARK
