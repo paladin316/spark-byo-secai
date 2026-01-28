@@ -1,0 +1,5 @@
+# Local analyst data and state
+# This directory is intentionally excluded from source control
+
+*
+!.gitignore
