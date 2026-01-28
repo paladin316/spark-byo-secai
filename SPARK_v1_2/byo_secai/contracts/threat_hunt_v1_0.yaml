@@ -1,0 +1,34 @@
+name: threat_hunt_v1_0
+artifact_type: hunt_package
+rules:
+  required_text_fields:
+    - objective
+    - scope_notes
+    - execution_notes
+  placeholder_values:
+    - "unknown"
+    - "tbd"
+    - "not applicable"
+    - "n/a"
+    - "none"
+  min_list_lengths:
+    hypotheses: 1
+    data_sources: 1
+    queries: 1
+  mitre_min:
+    min: 1
+  semantic_anchors:
+    objective:
+      # Require the objective to contain both a behavior and an outcome/test framing
+      min: 2
+      patterns:
+        - "(?i)\\b(hunt|identify|detect|validate|test|confirm|assess)\\b"
+        - "(?i)\\b(behavior|activity|tradecraft|technique|tactic|procedure|execution|persistence|c2|command and control|exfiltration|lateral movement)\\b"
+    scope_notes:
+      min: 1
+      patterns:
+        - "(?i)\\b(endpoint|cloud|network|windows|linux|macos|azure|aws|gcp|saas)\\b"
+    execution_notes:
+      min: 1
+      patterns:
+        - "(?i)\\b(run|execute|review|triage|validate|pivot|enrich|document)\\b"

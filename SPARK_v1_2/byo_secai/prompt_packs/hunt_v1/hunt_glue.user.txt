@@ -1,0 +1,27 @@
+You are given:
+1) INTEL_BRIEF_JSON (approved intel)
+2) HUNT_SEED_JSON (deterministic mapping output)
+3) MAPPING_TABLE (intel->hunt field guidance)
+
+Task:
+Fill ONLY the following Hunt fields using the intel, keeping everything consistent:
+- objective (string)
+- hypotheses (array of strings)
+- scope_notes (string)
+- execution_notes (string)
+- data_sources (array of strings)  # may refine but keep concrete telemetry
+
+Do NOT change queries. Do NOT add new IOCs.
+If intel is missing details, state assumptions clearly inside scope_notes and add concrete collection steps in execution_notes.
+
+Return JSON ONLY with keys:
+objective, hypotheses, scope_notes, execution_notes, data_sources
+
+MAPPING_TABLE:
+{{MAPPING_TABLE}}
+
+INTEL_BRIEF_JSON:
+{{INTEL_JSON}}
+
+HUNT_SEED_JSON:
+{{HUNT_SEED_JSON}}

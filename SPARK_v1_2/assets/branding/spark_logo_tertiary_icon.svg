@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="SPARK Tertiary UI Icon">
+  <title>SPARK Tertiary UI Icon</title>
+  <!-- Designed to work as a single-color icon: change 'currentColor' via CSS or the fill below -->
+  <g fill="none" stroke="currentColor" stroke-width="28" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Shield outline -->
+    <path d="M256 52
+             C192 88 138 104 92 112
+             V268
+             C92 360 156 438 256 476
+             C356 438 420 360 420 268
+             V112
+             C374 104 320 88 256 52 Z"/>
+    <!-- Vertical split -->
+    <path d="M256 86 V452"/>
+  </g>
+</svg>

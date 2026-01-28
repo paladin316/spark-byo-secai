@@ -1,0 +1,10 @@
+[theme]
+base = "dark"
+primaryColor = "#7327E6"  # spark-purple-500
+backgroundColor = "#0F1115"
+secondaryBackgroundColor = "#161A22"
+textColor = "#E5E7EB"
+font = "sans serif"
+
+[client]
+toolbarMode = "viewer"

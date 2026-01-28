@@ -1,0 +1,301 @@
+Perfect. This is the **right sequence**, and doing it now will save you from re-litigating branding six months from now.
+
+Below is a **clean, production-ready package** covering all three asks. This is written the way a real product team would lock it in.
+
+---
+
+# SPARK — Branding Lock-In (v1)
+
+## 1️⃣ Tertiary UI Icon (FINALIZED)
+
+### Purpose
+
+The tertiary icon exists **only** to support usability.
+It is not expressive. It is not decorative. It must survive extreme scaling.
+
+---
+
+### ✅ Final Tertiary Icon Definition
+
+**Form**
+
+* Shield outline only
+* Vertically split down the center
+* No binary
+* No gradients
+* No text
+* No knight
+* Flat geometry
+
+**Visual Characteristics**
+
+* Symmetrical
+* Medium stroke weight
+* Rounded corners (subtle, not soft)
+* Works at **16px, 24px, 32px**
+
+**Color Rules**
+
+* Default: `--spark-purple-500`
+* Dark mode: `--spark-purple-400`
+* Disabled / inactive: `--spark-gray-500`
+* Must work in **single-color monochrome**
+
+**Where it is used**
+
+* Top-left app navigation
+* Sidebar (expanded + collapsed)
+* Browser tab / favicon
+* App icon
+* Buttons / badges
+* Loading indicators (optional)
+
+**Hard rule**
+
+> If detail is visible only above 32px, it does not belong in the tertiary icon.
+
+This icon should feel *inevitable*, not noticeable.
+
+---
+
+## 2️⃣ UI Color Tokens (Exact, Not Vibes)
+
+This is the most important section.
+These are **tokens**, not raw colors. Tokens prevent drift.
+
+---
+
+### 🎨 Core Brand Tokens
+
+```text
+--spark-purple-600  # Brand anchor (logos, key accents)
+--spark-purple-500  # Primary UI accent
+--spark-purple-400  # Hover / active states
+--spark-purple-300  # Subtle highlights
+```
+
+**Usage**
+
+* Active tab indicator
+* Selected list items
+* Primary buttons
+* Focus states
+
+---
+
+### 🔵 Stability / Informational
+
+```text
+--spark-blue-600
+--spark-blue-500
+--spark-blue-400
+```
+
+**Usage**
+
+* Informational messages
+* Neutral confirmations
+* Secondary emphasis
+
+---
+
+### 🔴 Risk / Adversary Signal (Use Sparingly)
+
+```text
+--spark-red-600
+--spark-red-500
+--spark-red-400
+```
+
+**Usage**
+
+* Validation failures
+* High-risk findings
+* Adversary indicators
+
+**Rule**
+
+> Red is a signal, not decoration.
+
+---
+
+### ⚫ Neutral Foundation (80–90% of UI)
+
+```text
+--spark-gray-900  # Background (dark mode)
+--spark-gray-800
+--spark-gray-700
+--spark-gray-600
+--spark-gray-500
+--spark-gray-400
+--spark-gray-300
+--spark-gray-200
+```
+
+**Usage**
+
+* Layout
+* Text
+* Dividers
+* Panels
+
+If the UI looks “colorful,” you’ve already overused color.
+
+---
+
+### 🟢 Validation / Success
+
+```text
+--spark-green-600
+--spark-green-500
+--spark-green-400
+```
+
+**Usage**
+
+* Passed validation
+* Completed workflows
+* Confirmed results
+
+---
+
+### UI Color Rules (Non-Negotiable)
+
+* Purple = **identity**
+* Blue = **stability**
+* Red = **risk**
+* Green = **success**
+* Gray = **everything else**
+
+> If you can’t explain *why* a color is used, it shouldn’t be.
+
+---
+
+## 3️⃣ SPARK Brand Usage Contract (1-Page, Lock This In)
+
+This is your future-proofing document.
+
+---
+
+## SPARK — Brand & Visual Usage Contract
+
+### Brand Position
+
+SPARK is an **analyst-driven security platform** that prioritizes clarity, control, and evidence-based decision making. AI augments the analyst; it does not replace them.
+
+---
+
+### Visual Principles
+
+1. **Clarity over expression**
+2. **Structure over novelty**
+3. **Restraint over decoration**
+4. **Consistency over creativity**
+5. **Timelessness over trends**
+
+---
+
+### Logo Usage Rules
+
+* **Primary logo**
+
+  * Used only for brand identity
+  * Never embedded in UI workflows
+
+* **Secondary logo**
+
+  * Used for product representation
+  * Allowed on splash screens, reports, docs
+
+* **Tertiary icon**
+
+  * Used everywhere in UI
+  * No substitutions allowed
+
+---
+
+### Color Usage Rules
+
+* Brand colors are accents, not backgrounds
+* Red indicates risk, never style
+* Purple indicates identity, not decoration
+* Neutral tones dominate the interface
+
+---
+
+### Imagery Rules
+
+**Allowed**
+
+* Diagrams
+* Structured flows
+* Minimal icons
+* Annotated UI screenshots
+
+**Not allowed**
+
+* Hacker stock photos
+* Flames, sparks, lightning
+* AI brains, robots, humanoids
+* Masks, hoodies, skulls
+* Trend-driven visuals
+
+---
+
+### AI Representation Rule
+
+AI must always be shown as:
+
+* Assistive
+* Suggestive
+* Reviewable
+* Human-controlled
+
+Never autonomous. Never dominant.
+
+---
+
+### Drift Prevention Rule
+
+If a visual asset:
+
+* Adds noise
+* Obscures meaning
+* Competes with data
+* Feels trendy
+
+It does not ship.
+
+---
+
+## Final Status
+
+✔️ Tertiary UI icon finalized
+✔️ UI color tokens locked
+✔️ Brand usage contract defined
+
+You now have **branding guardrails**, not just branding assets.
+
+---
+
+### Next (Optional, but Logical)
+
+If you want to fully operationalize this, next steps would be:
+
+* Apply tokens directly into your Streamlit theme
+* Create SVG exports for all three logos
+* Add this contract as `docs/branding.md`
+* Audit existing UI screens against these rules
+
+Just tell me which one you want to execute next, and we’ll do it cleanly and once.
+
+Done — I exported **all three logos as SVGs**:
+
+* [Download the Primary Logo SVG](sandbox:/mnt/data/spark_logo_primary.svg)
+* [Download the Secondary Logo SVG](sandbox:/mnt/data/spark_logo_secondary.svg)
+* [Download the Tertiary UI Icon SVG](sandbox:/mnt/data/spark_logo_tertiary_icon.svg)
+
+Notes (quick + important):
+
+* **Primary + Secondary SVGs** are “SVG wrappers” embedding your current PNG artwork (so they’ll drop into web/UI pipelines cleanly as `.svg`).
+* **Tertiary icon** is a **true vector SVG** (monochrome-friendly, scales cleanly, uses `currentColor` so it’s easy to theme in UI).

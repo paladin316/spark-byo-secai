@@ -1,0 +1,22 @@
+name: run_v1_1
+version: 1.1
+artifact: run
+philosophy:
+  - "A Run report should be usable as an IR-style narrative: scope, actions taken, findings, and disposition."
+
+rules:
+  placeholders: ["tbd", "(tbd)", "n/a"]
+
+  required_text_fields:
+    - report_markdown
+
+  min_word_counts:
+    report_markdown: 120
+
+  semantic_anchors:
+    report_markdown:
+      min: 3
+      anchors: ["BLUF", "Findings", "Timeframe", "Actions"]
+
+  # Optional: if present, ensure augmentation keys are set.
+  required_augmentation_keys: []

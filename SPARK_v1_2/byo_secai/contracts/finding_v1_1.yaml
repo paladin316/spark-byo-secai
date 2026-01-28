@@ -1,0 +1,34 @@
+name: finding_v1_1
+version: 1.1
+artifact: finding
+philosophy:
+  - "A Finding is a decision-support artifact: what was observed, why it matters, and what to do next."
+  - "Findings should surface uncertainty explicitly and provide triage pivots."
+
+rules:
+  placeholders: ["tbd", "(tbd)", "n/a", "(none)"]
+
+  required_text_fields:
+    - description
+    - why_this_finding_exists
+    - signal_summary
+    - disposition_guidance
+
+  min_word_counts:
+    description: 18
+    why_this_finding_exists: 12
+    signal_summary: 12
+
+  semantic_anchors:
+    why_this_finding_exists:
+      min: 1
+      anchors: ["because", "matched", "observed"]
+    disposition_guidance:
+      min: 1
+      anchors: ["triage", "confirm", "allow-list", "without"]
+
+  min_list_lengths:
+    evidence: 1
+    mitre_techniques: 1
+    triage_questions: 2
+    recommended_next_steps: 2

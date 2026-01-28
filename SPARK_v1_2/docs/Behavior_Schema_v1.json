@@ -1,0 +1,33 @@
+{
+  "behavior_id": "BHV-0001",
+  "name": "EXFILTRATION via rclone",
+  "behavior_type": "EXFILTRATION",
+  "tactic": "Exfiltration",
+  "technique": "T1567.002",
+  "confidence": "high",
+  "sources": [
+    "Vendor blog",
+    "DFIR report",
+    "Advisory"
+  ],
+  "anchors": {
+    "tools": [
+      "rclone"
+    ],
+    "file_names": [
+      "rclone.exe"
+    ],
+    "domains": [
+      "mega.io"
+    ],
+    "urls": [
+      "https://example.com/payload.exe"
+    ],
+    "ip_ports": [
+      "203.0.113.10:443"
+    ],
+    "sequence_hint": true
+  },
+  "order": 3,
+  "within_seconds": 300
+}

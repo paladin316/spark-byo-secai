@@ -1,0 +1,43 @@
+name: ads_v1_1
+version: 1.1
+artifact: ads
+philosophy:
+  - "ADS is derived from evidence in a single linked Finding."
+  - "ADS should be assembled from observed artifacts and assertions, not generic prose."
+  - "Default posture is correlation + triage; promotion requires confidence + corroboration."
+
+rules:
+  placeholders: ["tbd", "(tbd)", "n/a", "(none)"]
+
+  # These fields must be meaningfully populated (not placeholder / empty).
+  required_text_fields:
+    - detection_goal
+    - logic
+    - why_this_ads_exists
+    - tuning
+    - validation
+    - deployment_notes
+
+  # Keep it short but non-trivial.
+  min_word_counts:
+    why_this_ads_exists: 18
+    logic: 25
+
+  # Opinionated semantic anchor checks.
+  semantic_anchors:
+    why_this_ads_exists:
+      min: 2
+      anchors: ["because", "exists", "observed", "finding"]
+      patterns:
+        - "\bnot\b"
+        - "\bintended\b"
+    deployment_notes:
+      min: 1
+      anchors: ["pilot", "promote", "suppress", "allow-list", "tune"]
+
+  # Structured lists must exist.
+  min_list_lengths:
+    telemetry: 2
+    mitre_techniques: 1
+    signal_confidence_ladder: 2
+

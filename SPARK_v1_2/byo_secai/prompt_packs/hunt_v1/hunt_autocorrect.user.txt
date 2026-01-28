@@ -1,0 +1,20 @@
+FIELDS_TO_UPDATE:
+{{FIELDS_TO_UPDATE}}
+
+CONTRACT_VIOLATIONS:
+{{VIOLATIONS}}
+
+INTEL_SUMMARY:
+{{INTEL_SUMMARY}}
+
+CURRENT_FIELDS_JSON:
+{{CURRENT_FIELDS_JSON}}
+
+Rules:
+- objective must mention the specific behavior/tool AND the test outcome.
+- scope_notes must state environment/platform boundaries (endpoint/cloud/network; Windows/Azure/SaaS).
+- data_sources must list specific telemetry sources (example: ProcessRollup2, NetworkConnectIP4).
+- hypotheses must be concrete "If <behavior>, then we expect <telemetry condition> leading to <outcome>".
+- mitre_techniques must be valid IDs (T#### or T####.###) supported by intel.
+
+Return JSON ONLY.

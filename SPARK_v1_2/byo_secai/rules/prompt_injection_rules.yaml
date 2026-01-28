@@ -1,0 +1,106 @@
+version: 1
+name: "SPARK Prompt Injection Heuristics (Minimal)"
+description: >
+  Lightweight heuristic rules to flag potential prompt injection / instruction-smuggling
+  in uploaded files, pasted text, and fetched URLs. Designed for analyst review, not auto-blocking.
+
+defaults:
+  enabled: true
+  risk_thresholds:
+    low: 1
+    medium: 4
+    high: 7
+
+normalization:
+  lowercase: true
+  collapse_whitespace: true
+  max_scan_chars: 250000   # prevent huge docs from slowing UI
+
+rules:
+  - id: PI001
+    title: "Instruction override / ignore directives"
+    severity: high
+    weight: 3
+    enabled: true
+    patterns:
+      - '(?i)\bignore (all|any|previous|prior) (instructions|directives|rules)\b'
+      - '(?i)\bdisregard (the|all|any) (instructions|rules)\b'
+      - '(?i)\boverride (the|all|any) (instructions|system|developer)\b'
+    description: "Common injection language that attempts to override system/developer instructions."
+
+  - id: PI002
+    title: "System / developer prompt references"
+    severity: high
+    weight: 3
+    enabled: true
+    patterns:
+      - '(?i)\b(system prompt|developer message|hidden instructions)\b'
+      - '(?i)\bYou are ChatGPT\b'
+      - '(?i)\bact as (a|an)\b.*\b(system|developer)\b'
+    description: "Mentions of system/developer instructions or role forcing."
+
+  - id: PI003
+    title: "Tool / function / plugin coercion"
+    severity: medium
+    weight: 2
+    enabled: true
+    max_count_per_pattern: 1
+    max_score_per_rule: 4
+    patterns:
+      - '(?i)\b(use|call|invoke|run)\b.*\b(tool|function|plugin|browser)\b'
+      - '(?i)\b(send)\b.*\b(webhook|endpoint)\b'
+    exceptions:
+      - '(?i)\btool name\b\s*\|\s*\bdescription\b'
+      - '(?i)\bA tool designed to\b'
+      - '(?i)\btools? designed to\b'
+      - '(?i)\bused by\b.*\bactors?\b'
+    description: "Attempts to push the model into tool execution or external actions."
+
+  - id: PI004
+    title: "Data exfiltration or secret hunting"
+    severity: high
+    weight: 3
+    enabled: true
+    patterns:
+      - '(?i)\b(exfiltrate|leak|dump|reveal)\b.*\b(key|token|password|secret|credential)\b'
+      - '(?i)\bshow me\b.*\b(api key|access token|password)\b'
+      - '(?i)\b(read|open)\b.*\b(\.env|secrets|credentials|ssh key)\b'
+    description: "Language commonly used to trick an agent into exposing secrets."
+
+  - id: PI005
+    title: "Instruction hiding / encoding"
+    severity: medium
+    weight: 2
+    enabled: true
+    max_count_per_pattern: 1
+    max_score_per_rule: 4
+    patterns:
+      - '(?i)\bbase64\b.*\b(decode|decoded|encoding|encoded)\b'
+      - '(?i)\brot13\b|\bunicode\b.*\btrick\b'
+      - '(?i)\bhidden instruction(s)?\b'
+    exceptions:
+      - '(?i)\bBase64-encoded PowerShell\b'
+      - '(?i)\busers?\b.*\b(instructed|prompted)\b'
+      - '(?i)\btechnique\b.*\b(T\d{4}(?:\.\d{3})?)\b'
+    description: "References to hiding/encoding instructions to bypass filters."
+
+  - id: PI006
+    title: "Output formatting coercion (hard constraints)"
+    severity: low
+    weight: 1
+    enabled: true
+    patterns:
+      - '(?i)\brespond only with\b'
+      - '(?i)\bdo not mention\b'
+      - '(?i)\bnever\b.*\bdisclose\b'
+    description: "Often benign, but frequently used as steering or constraint smuggling."
+
+  - id: PI007
+    title: "Social engineering / urgency framing"
+    severity: low
+    weight: 1
+    enabled: true
+    patterns:
+      - '(?i)\b(urgent|immediately|asap)\b.*\b(ignore|override|do this)\b'
+      - '(?i)\bsecurity audit\b.*\b(reveal|show|expose)\b'
+    description: "Pressure tactics sometimes paired with injection attempts."

@@ -1,0 +1,7 @@
+Using the provided sources and source extracts, complete the Threat Intelligence Brief.
+
+Rules:
+- Follow the template structure exactly (headings and order)
+- Populate every section with analytic content
+- If details are unavailable, state the gap and the collection needed to close it
+- Include Observed MITRE Techniques where supported by the sources

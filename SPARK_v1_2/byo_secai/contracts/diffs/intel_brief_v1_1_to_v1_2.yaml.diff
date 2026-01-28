@@ -1,0 +1,18 @@
+# Diff: intel_brief_v1_1.yaml -> intel_brief_v1_2.yaml
+# (YAML-oriented patch, additions marked with '+', removals with '-')
+
+rules:
++  # Optional tactic list (best-effort enrichment; not required)
++  allowed_lists:
++    observed_tactics:
++      - initial_access
++      - execution
++      - persistence
++      - privilege_escalation
++      - defense_evasion
++      - credential_access
++      - discovery
++      - lateral_movement
++      - command_and_control
++      - exfiltration
++      - impact

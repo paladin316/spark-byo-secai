@@ -1,0 +1,19 @@
+FIELDS_TO_UPDATE:
+{{FIELDS_TO_UPDATE}}
+
+CONTRACT_VIOLATIONS:
+{{CONTRACT_VIOLATIONS}}
+
+SAFE_FIELDS_POLICY:
+- Safe (allowed to auto-regenerate): gaps_and_collection, alternative_analysis, appendix, observed_mitre_techniques
+- Unsafe (never auto-regenerate): sources, evidence_and_indicators, iocs, and all other intel fields not listed as safe
+
+CURRENT_FIELDS_JSON:
+{{CURRENT_FIELDS_JSON}}
+
+Instructions
+- Fix ONLY the fields listed in FIELDS_TO_UPDATE.
+- Preserve the existing tone and facts.
+- If a requirement cannot be satisfied without inventing facts, write a clear gap and specific collection steps.
+
+Return JSON containing ONLY the updated fields plus optional _autocorrect_notes.

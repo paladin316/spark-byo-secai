@@ -1,0 +1,73 @@
+#############################################
+# SPARK (Powered by BYO-SECAI) - Root .gitignore
+# Tailored to this repo layout:
+# - SPARK_v1_2/ (app)
+# - SPARK_v1_2/data/rag/library/ (local RAG content)
+#############################################
+
+###############
+# OS / Editor #
+###############
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+
+#########################
+# Python bytecode/cache #
+#########################
+__pycache__/
+*.py[cod]
+*$py.class
+
+#########################
+# Python env / tooling  #
+#########################
+.venv/
+venv/
+env/
+
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+#####################
+# Streamlit artifacts#
+#####################
+# Keep your committed config:
+!SPARK_v1_2/.streamlit/config.toml
+
+# Never commit secrets:
+SPARK_v1_2/.streamlit/secrets.toml
+
+###########################
+# Local app/runtime output #
+###########################
+# Generic logs (none shipped, but prevents future accidents)
+*.log
+
+###############################
+# SPARK local analyst state    #
+###############################
+# Local RAG library is user-provided and should NOT be source-controlled
+SPARK_v1_2/data/rag/library/*
+
+# Keep the shipped starter examples folder tracked
+!SPARK_v1_2/data/rag/library/examples/
+!SPARK_v1_2/data/rag/library/examples/**
+
+#############################################
+# SPARK config that should stay local       #
+#############################################
+# Treat api_config.yaml as local runtime config (ship an *.example.yaml instead)
+SPARK_v1_2/api_config.yaml
+
+# Common local overrides (optional future-proofing)
+*.local
+*.local.*
+*.bak
+*.tmp
+*.swp

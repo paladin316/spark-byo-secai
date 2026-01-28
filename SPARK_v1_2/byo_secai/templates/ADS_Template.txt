@@ -1,0 +1,114 @@
+
+
+Goal
+
+
+[Goal gives a short, plaintext description of the type of behavior the ADS is supposed to detect.]
+
+Categorization
+
+
+[Categorization provides a mapping of the ADS to the relevant entry in the MITRE Adversarial Tactics, Techniques, and Common Knowledge (ATT&CK) Framework. ATT&CK provides a language for various post-exploitation techniques and strategies that adversaries might use.
+
+Mapping to the ATT&CK framework allows for further investigation into the technique, provides a reference to the areas of the killchain where the ADS will be used, and can further drive insight and metrics into alerting gaps. In our environment, we have a knowledge base which maps all of our ADS to individual components of the MITRE ATT&CK framework. When generating a hypothesis for a new alert, an engineer can simply review where we are strongest — or weakest — according to individual ATT&CK techniques.]
+
+Tactic: [Provide the MITRE tactics that applies to this ADS]
+Technique: [Provide the MITRE techniques that applies to this ADS]
+
+Strategy Abstract
+
+
+Strategy Abstract is a high-level walkthrough of how the ADS functions. This describes what the alert is looking for, what technical data sources are used, any enrichment that occurs, and any false positive minimization steps.
+
+
+
+[Create a process flow diagram of how detection works]
+
+Example:
+
+Open image-20240816-144559.png
+image-20240816-144559.png
+
+
+Technical Context
+
+
+[Technical Context provides detailed information and background needed for a responder to understand all components of the alert. This should appropriately link to any platform or tooling knowledge and should include information about the direct aspects of the alert. The goal of the Technical Context section is to provide a self-contained reference for a responder to make a judgement call on any potential alert, even if they do not have direct subject matter expertise on the ADS itself.]
+
+Blind Spots and Assumptions
+
+
+[Blind Spots and Assumptions are the recognized issues, assumptions, and areas where an ADS may not fire. No ADS is perfect and identifying assumptions and blind spots can help other engineers understand how an ADS may fail to fire or be defeated by an adversary.]
+
+Visibility Requirements:
+
+[What visibility requirements need to exist for this ADS to work? Example: CrowdStrike is running on the host and configured to collect and generate events around process creation and command line arguments.]
+
+Blind spots:
+
+[What blind spots exist for this ADS to work? ]
+
+Example:
+
+This detection is specific to the DLLs and exported functions listed in the "Strategy Abstract" section. Any execution of DLLs or exported functions not listed will be missed.
+
+If the attacker manipulates the command line arguments by inserting an extra space or performs command line obfuscation this detection will not trigger. Carbon Black does not allow for advanced query creation that would allow the removal of an extra space or to apply any deobfuscation measures to avoid false negatives.
+
+
+
+False Positives
+
+
+[False Positives are the known instances of an ADS misfiring due to a misconfiguration, idiosyncrasy in the environment, or other non-malicious scenario. These false positive alerts should be suppressed within the Security Information and Event Management tool (SIEM) to prevent alert generation when a known false positive event occurs.]
+
+Priority
+[Priority describes the various alerting levels that an ADS may be tagged with. While the alert itself should reflect the priority when it is fired through configuration in your SIEM (e.g., High, Medium, Low), this section details the criteria for the specific priorities.]
+
+Example:
+Scale: Information, Low, Medium, High, Critical
+#Query for for T1059_Command_and_Scripting_Interpreter:
+
+Priority is High
+
+Validation
+
+
+[Validation lists the steps required to generate a representative true positive event which triggers this alert. This is similar to a unit test and describes how an engineer can cause the ADS to fire. This can be a walkthrough of steps used to generate an alert, a script to trigger the ADS (such as AttackIQ or Red Canary’s Atomic Red Team Tests), or a scenario used in an alert testing and orchestration platform.]
+
+Response
+[Responses are the general response steps in the event that this alert fired. These steps instruct the next responder on the process of triaging and investigating an alert.]
+
+
+
+Examples Response:
+
+CrowdStrike Investigation Strategy:
+This activity should be  investigated to determine source and context of the activity. Run the query found here Incident Response - CrowdStrike Investigation Strategy to investigate the activity and to identify additional context of what happened and why.
+
+
+Incident Response Questionnaire:
+
+If the activity is determined to be malicious, provide that answers to the sections listed below where the observations can be applied as best as possible. This information will help in telling the story of what we know vs what we do not know and can aid in writing the incident report.
+
+Should the activity identified be confirmed malicious, declare an incident to implement the G.53 process.
+
+For the investigation, complete the Incident Response Template.
+
+
+
+Example ADS Query
+
+CrowdStrike Detection Query:
+
+
+
+
+Examples Splunk Notable:
+
+Splunk Query:
+
+
+
+
+Additional Resources
+ [Additional Resources are any other internal, external, or technical references that may be useful for understanding the ADS.]
