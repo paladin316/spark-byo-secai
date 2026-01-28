@@ -78,7 +78,7 @@ What is happening? Why it matters. How it typically operates.
 **Lifecycle role:**  
 Starting point. Feeds Threat Hunt Packages.
 
-📄 See: `threat-intel-briefing.md`
+📄 See: [threat-intel-briefing](/docs/templates/threat-intel-briefing.md)
 
 ---
 
@@ -98,7 +98,7 @@ If this threat is present, what would we expect to see?
 **Lifecycle role:**  
 Built from Threat Intel. Executed as hunts. Produces results.
 
-📄 See: `threat-hunt-package.md`
+📄 See: [threat-hunt-package](/docs/templates/threat-hunt-package.md)
 
 ---
 
@@ -118,7 +118,7 @@ What did we test? What did we observe? What did we conclude?
 **Lifecycle role:**  
 Produced after hunt execution. May stand alone or feed IR.
 
-📄 See: `threat-hunt-report.md`
+📄 See: [threat-hunt-report](/docs/templates/threat-hunt-report.md)
 
 ---
 
@@ -138,7 +138,7 @@ What suspicious or malicious behavior was observed, and with what confidence?
 **Lifecycle role:**  
 Created only when findings exist. Feeds detection strategy.
 
-📄 See: `threat-hunt-ir-report.md`
+📄 See: [threat-hunt-ir-report](/docs/templates/threat-hunt-ir-report.md)
 
 ---
 
@@ -158,7 +158,7 @@ How do we reliably detect this behavior going forward?
 **Lifecycle role:**  
 Final analytical artifact. Informs SIEM / EDR implementation.
 
-📄 See: `ads.md`
+📄 See: [ADS](/docs/templates/ads.md)
 
 ---
 
@@ -189,9 +189,9 @@ Speed comes from clarity, not shortcuts.
 
 ## Related Concepts
 
-- Threat Hunting Philosophy → `docs/01_concepts/threat-hunting-philosophy.md`
-- Operational Threat Intelligence → `docs/01_concepts/operational-threat-intelligence.md`
-- Terminology → `docs/01_concepts/terminology.md`
+- Threat Hunting Philosophy → [threat-hunting-philosophy](/docs/01_concepts/threat-hunting-philosophy.md)
+- Operational Threat Intelligence → [operational-threat-intelligence](/docs/01_concepts/operational-threat-intelligence.md)
+- Terminology → [terminology](/docs/01_concepts/terminology.md)
 
 ---
 
