@@ -15,23 +15,23 @@ This example walks through all five SPARK artifacts:
 
 1. **Threat Intelligence Briefing**  
    Establishes context, scope, and understanding of the threat.  
-   *File:* `01_threat-intel-brief.md`
+   *File:* [01_threat-intel-brief.md](/docs/demo/full-lifecycle-example/threat-intel-brief.md)
 
 2. **Threat Hunt Package**  
    Translates intelligence into a testable hunt hypothesis.  
-   *File:* `02_threat-hunt-package.md`
+   *File:* [02_threat-hunt-package.md](docs/demo/full-lifecycle-example/threat-hunt-package.md)
 
 3. **Threat Hunt Report**  
    Documents what was tested and what was observed.  
-   *File:* `03_threat-hunt-report.md`
+   *File:* [03_threat-hunt-report.md](/docs/demo/full-lifecycle-example/threat-hunt-report.md)
 
 4. **Threat Hunt IR Report**  
    Analyzes actionable findings that warrant escalation or response.  
-   *File:* `04_threat-hunt-ir-report.md`
+   *File:* [04_threat-hunt-ir-report.md](/docs/demo/full-lifecycle-example/threat-hunt-ir-report.md)
 
 5. **Alert & Detection Strategy (ADS)**  
    Defines how to reliably detect the behavior going forward.  
-   *File:* `05_ads.md`
+   *File:* [05_ads.md](/docs/demo/full-lifecycle-example/ads.md)
 
 Each artifact builds on the previous one. None are skipped.
 
