@@ -66,7 +66,7 @@ SPARK operationalizes threat intelligence through a structured, analyst-driven l
 that transforms raw research into validated detections.
 
 <p align="center">
-  <img src="../images/spark-process-lifecycle.png" alt="SPARK process lifecycle">
+  <img src="/docs/images/spark-process-lifecycle.png" alt="SPARK process lifecycle">
 </p>
 Each phase is designed to preserve context, enforce validation, and maintain auditability.
 
