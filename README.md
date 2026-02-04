@@ -24,6 +24,9 @@ This mode allows users to:
 
 For full functionality (local RAG ingestion, persistent workspace state, and real processing), run SPARK locally.
 
+🔗 Live Demo App:
+https://spark-byo-secai-y3d3jn6gkd99vvvlzqrp7g.streamlit.app/
+
 ---
 
 ## Why SPARK Exists
