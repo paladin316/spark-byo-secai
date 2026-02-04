@@ -1,5 +1,0 @@
-{
-  "name": "LockBit Full Lifecycle (Simulation)",
-  "description": "End-to-end LockBit intrusion lifecycle demonstrating Intel \u2192 Hunt \u2192 Run \u2192 Findings \u2192 ADS (read-only simulation).",
-  "default_topic": "LockBit Ransomware"
-}
