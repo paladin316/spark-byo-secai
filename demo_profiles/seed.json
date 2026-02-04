@@ -1,0 +1,17 @@
+{
+  "profile_id": "lockbit_01",
+  "scenario_name": "LockBit ransomware intrusion lifecycle (~11 days)",
+  "topic": "LockBit Ransomware",
+  "org_name": "Metropolis Financial Group",
+  "default_knobs": {
+    "environment": "Windows",
+    "confidence": "High",
+    "strictness": "High",
+    "data_sources": [
+      "EDR",
+      "DNS"
+    ],
+    "time_window": "Last 30 days"
+  },
+  "source_hint": "Demo-only canned scenario (simulation mode)"
+}
