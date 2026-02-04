@@ -15,23 +15,10 @@ SPARK is built for threat hunters, detection engineers, and incident responders 
 
 ---
 
-## Why SPARK Exists
-
-Threat intelligence is abundant — but operational outcomes are not.
-
-Security teams routinely collect reports, advisories, and indicators, yet the translation from **intelligence → hunt → finding → detection** is often manual, inconsistent, and lost over time. Context fades, assumptions disappear, and detections become disconnected from the intelligence that justified them.
-
-SPARK exists to close this gap by preserving **analyst reasoning, traceability, and intent** while using AI to reduce mechanical effort — **not replace judgment**.
-
-**AI in SPARK is RAG-based and content-agnostic:** no bundled corpus, no internet inference—only analyst-provided knowledge.
-
----
-
 # SPARK (Powered by BYO-SECAI)
 
-Analyst-driven threat intelligence → hunt → detection, designed to preserve analyst intent and reasoning while using AI in a supporting role.
-
-SPARK focuses on operational threat intelligence and structured workflows rather than ad-hoc IOC-driven analysis.
+**Analyst-driven threat intelligence → hunt → detection**  
+A local-first security workflow that combines structured reasoning with AI-augmented insight.
 
 ## Live Demo (Simulation Mode)
 
@@ -44,9 +31,22 @@ This mode allows users to:
 
 For full functionality (local RAG ingestion, persistent workspace state, and real processing), run SPARK locally.
 
-## Getting Started (Local Mode)
+## Getting Started
+… (existing installation / usage steps) …
 
-...
+---
+
+## Why SPARK Exists
+
+Threat intelligence is abundant — but operational outcomes are not.
+
+Security teams routinely collect reports, advisories, and indicators, yet the translation from **intelligence → hunt → finding → detection** is often manual, inconsistent, and lost over time. Context fades, assumptions disappear, and detections become disconnected from the intelligence that justified them.
+
+SPARK exists to close this gap by preserving **analyst reasoning, traceability, and intent** while using AI to reduce mechanical effort — **not replace judgment**.
+
+**AI in SPARK is RAG-based and content-agnostic:** no bundled corpus, no internet inference—only analyst-provided knowledge.
+
+---
 
 ## Threat Hunting Philosophy
 
