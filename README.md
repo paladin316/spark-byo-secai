@@ -27,6 +27,27 @@ SPARK exists to close this gap by preserving **analyst reasoning, traceability, 
 
 ---
 
+# SPARK (Powered by BYO-SECAI)
+
+Analyst-driven threat intelligence → hunt → detection, designed to preserve analyst intent and reasoning while using AI in a supporting role.
+
+SPARK focuses on operational threat intelligence and structured workflows rather than ad-hoc IOC-driven analysis.
+
+## Live Demo (Simulation Mode)
+
+SPARK includes a Simulation Mode designed for guided walkthroughs and exploration without requiring local resources or live telemetry.
+
+This mode allows users to:
+- Walk through the full Intel → Hunt → Run → Findings → ADS lifecycle
+- Adjust parameters and see how outputs change
+- Explore a grounded Workspace chat experience
+
+For full functionality (local RAG ingestion, persistent workspace state, and real processing), run SPARK locally.
+
+## Getting Started (Local Mode)
+
+...
+
 ## Threat Hunting Philosophy
 
 SPARK is built on a practitioner-driven threat hunting philosophy that emphasizes behavioral analysis, hypothesis-driven hunts, and durable detection outcomes.
