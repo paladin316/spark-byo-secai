@@ -134,3 +134,101 @@ SPARK includes:
 
 ### Workspace Flow (High Level)
 
+```
+Notebook Workspace (analysis & reasoning)
+        ↓
+Platform Workspace (validated artifacts & lifecycle)
+```
+
+See:
+- `docs/architecture/workspace-chat-notebook.md`
+- `docs/architecture/workspace-platform.md`
+
+---
+
+## SPARK in Action (Quick Walkthrough)
+
+### Structured Threat Intelligence
+
+![SPARK Intel Demo](docs/assets/demo-intel.gif)
+
+SPARK transforms raw operational intelligence into a structured, analyst-validated threat report.  
+Narrative context, indicators, and MITRE ATT&CK techniques remain linked and auditable.
+
+---
+
+### Structured Threat Hunting
+
+![SPARK Hunt Demo](docs/assets/demo-hunt.gif)
+
+SPARK translates intelligence into a structured hunt package capturing hypotheses, scope, data sources, and queries — without collapsing context or over-automating conclusions.
+
+---
+
+### Detection Strategy Authoring
+
+![SPARK ADS Demo](docs/assets/demo-ads.gif)
+
+SPARK closes the loop by transforming validated findings into actionable detection strategies, including response guidance and known blind spots.
+
+---
+
+## Security & Network Controls
+
+### Local-First by Design
+- No cloud LLM required by default
+- Compatible with local LLMs (e.g., Ollama)
+- No hidden telemetry or automatic data exfiltration
+
+### Prompt Injection Awareness
+SPARK includes lightweight detection of instruction-like patterns in security content to **inform analysts**, not block workflows.
+
+### Proxy Support
+Optional outbound proxy configuration for restricted enterprise environments.
+
+---
+
+## Quick Start
+
+1. **Install dependencies**
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+2. **(Optional) Ensure Ollama is running**
+```bash
+ollama pull llama3.1
+```
+
+3. **Run SPARK locally**
+```bash
+streamlit run app.py
+```
+
+---
+
+## Data and Storage
+
+All artifacts are stored locally by default:
+- `./data/artifacts/` — structured JSON artifacts
+- `./data/exports/` — human-readable Markdown exports
+
+No data is transmitted externally unless explicitly configured by the user.
+
+---
+
+## License
+
+**Apache-2.0**
+
+---
+
+## Attribution & Credit
+
+SPARK (Powered by BYO-SECAI) is shared freely for the community.
+
+If this project, its concepts, workflows, or documentation were helpful to you — or if you leverage ideas from SPARK in your own work — please reference or cite this project where appropriate.
+
+Attribution is the preferred form of support.
