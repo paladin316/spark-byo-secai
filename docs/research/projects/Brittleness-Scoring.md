@@ -1,0 +1,40 @@
+# Brittleness-Scoring
+
+## Overview
+
+Measure resilience of detections against environmental change.
+
+## Objectives
+
+- Advance cybersecurity research
+- Develop reusable methodologies
+- Explore practical architectures
+
+## Status
+
+Active.
+
+## Motivation
+
+Operational security teams repeatedly solve similar problems. This project investigates reusable approaches that improve consistency, explainability, and engineering quality.
+
+## Research Objectives
+
+- Define repeatable methodologies
+- Identify measurable success criteria
+- Explore practical architectures
+- Document lessons learned
+- Encourage continuous refinement
+
+## Scope
+
+This project documents research direction, architecture, and selected engineering concepts. Detailed implementation evolves independently over time.
+
+## Relationships
+
+See ROADMAP.md and the Research Index for related initiatives.
+
+## Status
+
+Active research and ongoing development.
+
