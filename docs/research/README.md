@@ -4,8 +4,6 @@ Welcome to the SPARK Research Program.
 
 This section documents independent cybersecurity research, architecture, methodologies, and selected public implementations.
 
-# SPARK
-
 # Security Platform for Applied Research and Knowledge
 
 SPARK is an independent cybersecurity research and engineering program focused on advancing threat hunting, detection engineering, incident response, security automation, behavioral analytics, and artificial intelligence.
@@ -27,4 +25,4 @@ Advance cybersecurity through practical engineering, evidence-driven research, a
 - Security Automation
 - Threat Intelligence
 
-See `ROADMAP.md` and `docs/RESEARCH_INDEX.md`.
+See `ROADMAP.md` and `RESEARCH_INDEX.md`.
