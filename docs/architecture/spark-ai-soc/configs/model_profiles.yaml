@@ -1,0 +1,17 @@
+model_profiles:
+  external_reasoning:
+    provider: openai
+    model: gpt-5.5
+    purpose: deep reasoning and synthesis
+  external_fast:
+    provider: openai
+    model: gpt-5.5-mini
+    purpose: fast triage and summarization
+  local_default:
+    provider: ollama
+    model: llama3.1
+    purpose: local fallback
+  local_code:
+    provider: ollama
+    model: qwen2.5-coder
+    purpose: code review and query generation

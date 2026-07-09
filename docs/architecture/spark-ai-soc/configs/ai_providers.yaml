@@ -1,0 +1,16 @@
+providers:
+  openai:
+    enabled: true
+    api_key_env: OPENAI_API_KEY
+  anthropic:
+    enabled: false
+    api_key_env: ANTHROPIC_API_KEY
+  gemini:
+    enabled: false
+    api_key_env: GEMINI_API_KEY
+  ollama:
+    enabled: true
+    base_url_env: OLLAMA_BASE_URL
+  lm_studio:
+    enabled: false
+    base_url_env: LM_STUDIO_BASE_URL

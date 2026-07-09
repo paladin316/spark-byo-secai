@@ -1,0 +1,17 @@
+[project]
+name = "spark-ai-soc"
+version = "0.0.1"
+description = "SPARK AI SOC Phase 0 scaffold: API-first, local-first ready AI-assisted SOC agents."
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.0",
+  "pyyaml>=6.0",
+  "jsonschema>=4.0",
+  "typer>=0.12"
+]
+
+[project.scripts]
+spark-ai-soc = "spark_ai_soc.main:app"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,10 @@
+platforms:
+  crowdstrike:
+    query_languages: [logscale, cql]
+    primary_events: [ProcessRollup2, NetworkConnectIP4, NetworkConnectIP6, AsepValueUpdate, DriverLoad, WebScriptFileWritten]
+  splunk:
+    query_languages: [spl]
+  sentinel:
+    query_languages: [kql]
+  defender:
+    query_languages: [kql]

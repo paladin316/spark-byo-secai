@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ir_report",
+  "type": "object",
+  "required": [
+    "summary",
+    "classification",
+    "scope",
+    "timeline"
+  ],
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "classification": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "timeline": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

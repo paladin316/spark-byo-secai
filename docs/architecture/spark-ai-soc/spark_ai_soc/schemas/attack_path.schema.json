@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "attack_path",
+  "type": "object",
+  "required": [
+    "name",
+    "steps",
+    "assumptions"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "assumptions": {
+      "type": "string"
+    }
+  }
+}

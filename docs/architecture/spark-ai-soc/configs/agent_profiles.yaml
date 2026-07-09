@@ -1,0 +1,13 @@
+agents:
+  intel_analyst:
+    prompt: spark_ai_soc/prompts/intel_analyst.md
+    default_model_profile: external_reasoning
+  threat_hunter:
+    prompt: spark_ai_soc/prompts/threat_hunter.md
+    default_model_profile: external_reasoning
+  detection_engineer:
+    prompt: spark_ai_soc/prompts/detection_engineer.md
+    default_model_profile: external_reasoning
+  incident_responder:
+    prompt: spark_ai_soc/prompts/incident_responder.md
+    default_model_profile: external_fast
