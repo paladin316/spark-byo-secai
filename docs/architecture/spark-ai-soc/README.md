@@ -60,7 +60,7 @@ SPARK-compatible folder structure
 
 ## Recommended Runtime Profile
 
-For Phase 0 on a 32 GB RAM HP ZBook:
+For Phase 0 on a 32 GB RAM Intel Platform:
 
 ```text
 Primary AI: External API
