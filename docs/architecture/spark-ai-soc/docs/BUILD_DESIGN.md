@@ -1,4 +1,4 @@
-# HP ZBook Phase 0 Build Design
+# Phase 0 Build Design
 
 ## Target Host
 
